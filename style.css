@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    user-select: none;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    user-select: none;
 }
 
 body {
@@ -58,10 +58,67 @@ img {
     -moz-transition: filter ease-in-out 0.3s ;
     -ms-transition: filter ease-in-out 0.3s ;
     -o-transition: filter ease-in-out 0.3s ;
+    user-select: none;
 }
 
 img:hover {
     transition: filter ease-in-out 0.3s ;
     filter: grayscale(0);
     -webkit-filter: grayscale(0);
+}
+
+
+/* UPLOAD.HTML */
+
+form {
+    /* background-color: lightblue; */
+    display: flex;
+    width: 450px;
+    height: auto;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 50px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+
+input, textarea{
+    width: 400px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    height: 50px;
+    border: solid 2px #334d63;
+    margin: 20px;
+    background-color: #284A66;
+    color: white;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.title {
+    font-size: 14pt;
+    font-weight: normal;
+}
+
+.file {
+    border: none;
+    margin: 20;
+}
+
+.description {
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+    height: 150px;
+}
+
+.description::placeholder {
+    font-size: 14pt;
+}
+
+.submit {
+    color: #899cab;
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir imagen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header><a href="./index.php">Galería.com.ar</a></header>
+    <div class="sub-header">
+        <a href="./index.php">
+            Galería
+        </a>
+        <a>
+            Subir fotos
+        </a>
+    </div>
+
+    <form action="backend.php" method="POST">
+        <input name="file" type="file" class="file" required>
+        <input name="title" type="text" class="title" placeholder="TITULO" required>
+        <textarea name="description" maxlength="200" class="description" placeholder="DESCRIPCION (200 CH MAX)"></textarea>
+        <input name="author" type="text" class="author" placeholder="AUTOR">
+        <input name="submit" type="submit" class="submit" value="ENVIAR IMAGEN">
+    </form>
+</body>
+</html>

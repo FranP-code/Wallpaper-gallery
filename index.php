@@ -23,14 +23,51 @@
     <div class="gallery-container">
         <?php
 
+        $actualPage = 1;
+
+        require 'galleryLogic.php';
+
         $i = 0;
 
         do {
-            echo '<img class="img" src="./img/img-test.jpg">';
+            $selection = $arrayPhotos[$i * $actualPage]['ruta'];
+            $title = $arrayPhotos[$i * $actualPage]['titulo'];
+
+            echo "<div><img class='img' src='$selection'><h2>$title</h2></div>";
             $i++;
+
         } while ($i < 6);
 
         ?>
     </div>
+    <ul>
+            <?php
+
+            $actualPage = 1;
+
+
+            require 'galleryLogic.php';
+
+            if ($actualPage == 1) {
+                echo '<li class="disabled"><-</li>';
+            } else {
+                echo '<li><-</li>';
+            }
+
+            $i = 0;
+
+            do {
+                $i++;
+
+                if ($i == $actualPage) {
+                    echo '<li class="disabled">'. $i .'</li>';
+                } else {
+                    echo '<li>'. $i .'</li>';
+                }
+            } while ($i < $cantPages);
+
+            ?>
+        <li>-></li>
+    </ul>
 </body>
 </html>

@@ -27,6 +27,51 @@ header a {
     font-size: 50pt;
 }
 
+.ar {
+    background: #AEAEAE;
+    
+    /**/
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /*CREDITS: https://cssgradient.io/blog/css-gradient-text/
+        
+    /**/
+    
+}
+
+.ar {
+    transition: ease-in-out 0.4s background;
+    -webkit-transition: ease-in-out 0.4s background;
+    -moz-transition: ease-in-out 0.4s background;
+    -ms-transition: ease-in-out 0.4s background;
+    -o-transition: ease-in-out 0.4s background;
+}
+
+.ar:hover {
+    background: linear-gradient(180deg, rgba(0,156,250,1) 0%, rgba(255,255,255,1) 100%);
+
+    /**/
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*CREDITS: https://cssgradient.io/blog/css-gradient-text/
+    
+    /**/
+    
+}
+
+.ar:hover {
+    transition: ease-in-out 0.4s background;
+    -webkit-transition: ease-in-out 0.4s background;
+    -moz-transition: ease-in-out 0.4s background;
+    -ms-transition: ease-in-out 0.4s background;
+    -o-transition: ease-in-out 0.4s background;
+}
+
+
 .sub-header {
     background-color: #ffffff04;
     height: 50px;
@@ -39,6 +84,20 @@ header a {
     font-weight: bold;
     font-size: 20pt;
     margin: auto;
+    transition: 0.4s ease-in-out color;
+    -webkit-transition: 0.4s ease-in-out color;
+    -moz-transition: 0.4s ease-in-out color;
+    -ms-transition: 0.4s ease-in-out color;
+    -o-transition: 0.4s ease-in-out color;
+}
+
+.available:hover {
+    color: #d1d1d180;
+    transition: 0.4s ease-in-out color;
+    -webkit-transition: 0.4s ease-in-out color;
+    -moz-transition: 0.4s ease-in-out color;
+    -ms-transition: 0.4s ease-in-out color;
+    -o-transition: 0.4s ease-in-out color;
 }
 
 .gallery-container {

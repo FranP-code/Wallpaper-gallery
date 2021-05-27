@@ -10,12 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header><a href="./index.php">Galería.com.ar</a></header>
+    <header><a href="./index.php">Galería.com.<span class="ar">ar</span></a></header>
     <div class="sub-header">
         <a>
             Galería
         </a>
-        <a href="./upload.html">
+        <a href="./upload.html" class="available"> 
             Subir fotos
         </a>
     </div>

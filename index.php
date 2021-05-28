@@ -45,13 +45,10 @@
 
             $actualPage = 1;
 
-
-            require 'galleryLogic.php';
-
             if ($actualPage == 1) {
                 echo '<li class="disabled"><-</li>';
             } else {
-                echo '<li><-</li>';
+                echo '<a href="page-'. $actualPage - 1 . '.php"><li><-</li>';
             }
 
             $i = 0;
@@ -62,12 +59,18 @@
                 if ($i == $actualPage) {
                     echo '<li class="disabled">'. $i .'</li>';
                 } else {
-                    echo '<li>'. $i .'</li>';
+                    echo '<a href="page-'. $actualPage + 1 . '.php"><li>'. $i .'</li></a>';
                 }
             } while ($i < $cantPages);
 
+            if ($actualPage == $cantPages) {
+                echo '<li class="disabled">-></li>';
+            } else {
+                echo '<a href="page-' . $actualPage + 1 . '.php"><li>-></li></a>';
+            }
+
             ?>
-        <li>-></li>
+
     </ul>
 </body>
 </html>

@@ -2,6 +2,8 @@
 
 require './mySqlConnect.php';
 
+error_reporting(0);
+
 $desdeN = null;
 $hastaN = null;
 
@@ -20,5 +22,19 @@ $arrayPhotos = $photos -> fetchAll();
 $cantPages = ($connection -> query("select * from imagenes")) -> fetchAll();
 $cantPages = count($cantPages) / 6;
 $cantPages = ceil($cantPages);
+
+
+for ($i = 1; $i <= $cantPages; $i++) {
+
+    if ($i !== 1 /* && !file_exists("./pages/page-$i.php") */) {
+        $template = file('./template.txt');
+        //print_r($template);
+
+        $template[25] = '$actualPage = '. $i.';';
+        $template[45] = '$actualPage = '. $i.';';
+
+        file_put_contents("./page-$i.php", $template);
+    }
+}
 
 ?>

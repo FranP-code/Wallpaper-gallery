@@ -33,7 +33,12 @@
             $selection = $arrayPhotos[$i * $actualPage]['ruta'];
             $title = $arrayPhotos[$i * $actualPage]['titulo'];
 
-            echo "<div><img class='img' src='$selection'><h2>$title</h2></div>";
+            if (isset($selection) && isset($title)) {
+                echo "<div><img class='img' src='$selection'><h2>$title</h2></div>";
+
+             } else {
+                echo "<div><img class='img' src='./img/default.jpg'><h2>-X-</h2></div>";
+             }
             $i++;
 
         } while ($i < 6);

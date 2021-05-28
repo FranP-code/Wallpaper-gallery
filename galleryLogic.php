@@ -31,7 +31,7 @@ for ($i = 1; $i <= $cantPages; $i++) {
         //print_r($template);
 
         $template[25] = '$actualPage = '. $i.';';
-        $template[45] = '$actualPage = '. $i.';';
+        $template[51] = '$actualPage = '. $i.';';
 
         file_put_contents("./page-$i.php", $template);
     }

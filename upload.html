@@ -20,11 +20,11 @@
         </a>
     </div>
 
-    <form action="backend.php" method="POST">
-        <input name="file" type="file" class="file" required>
-        <input name="title" type="text" class="title" placeholder="TITULO" required>
+    <form action="upload.php" method="POST" enctype="multipart/form-data" >
+        <input name="file" type="file" class="file" required accept=".jpg,.jpeg,.png,.webp">
+        <input name="title" type="text" maxlength="50" class="title" placeholder="TITULO" required>
         <textarea name="description" maxlength="200" class="description" placeholder="DESCRIPCION (200 CH MAX)"></textarea>
-        <input name="author" type="text" class="author" placeholder="AUTOR">
+        <input name="author" type="text" maxlength="200" class="author" placeholder="AUTOR">
         <input name="submit" type="submit" class="submit" value="ENVIAR IMAGEN">
     </form>
 </body>

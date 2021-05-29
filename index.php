@@ -34,7 +34,12 @@
             $title = $arrayPhotos[$i * $actualPage]['titulo'];
 
             if (isset($selection) && isset($title)) {
-                echo "<div><img class='img' src='$selection'><h2>$title</h2></div>";
+                echo "<div>
+                        <a href='$selection'>
+                            <img class='img' src='$selection'>
+                        </a>
+                        <h2>$title</h2>
+                    </div>";
 
              } else {
                 echo "<div><img class='img' src='./img/default.jpg'><h2>-X-</h2></div>";
@@ -64,8 +69,9 @@
                 if ($i == $actualPage) {
                     echo '<li class="disabled">'. $i .'</li>';
                 } else {
-                    echo '<a href="page-'. $actualPage + 1 . '.php"><li>'. $i .'</li></a>';
+                    echo '<a href="page-'. $actualPage + ($i - 1) . '.php"><li>'. $i .'</li></a>';
                 }
+
             } while ($i < $cantPages);
 
             if ($actualPage == $cantPages) {

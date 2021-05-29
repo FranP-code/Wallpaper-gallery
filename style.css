@@ -200,6 +200,10 @@ input:focus, textarea:focus {
     font-weight: normal;
 }
 
+input:disabled {
+    background-color: rgb(107, 0, 0);
+}
+
 .file {
     border: none;
     margin: 20;

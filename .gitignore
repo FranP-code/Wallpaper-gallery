@@ -1,6 +1,6 @@
 /img
 
-*.jpg
-*.png
-*.jpeg
-*.webp
+/img*.jpg
+/img*.png
+/img*.jpeg
+/img*.webp

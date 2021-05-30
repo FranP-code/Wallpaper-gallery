@@ -26,7 +26,7 @@ $cantPages = ceil($cantPages);
 
 for ($i = 1; $i <= $cantPages; $i++) {
 
-    if ($i !== 1 /* && !file_exists("./pages/page-$i.php") */) {
+    if ($i !== 1  && !file_exists("./pages/page-$i.php")) {
         $template = file('./template.txt');
         //print_r($template);
 

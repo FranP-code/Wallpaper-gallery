@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="es" id="html_error"> 
+<html lang="es" id="html_success">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error!!</title>
+    <title>Exito!!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class='container'>
-            <img src="error_icon.png"><span class="title">ERROR</span>
+            <img src="success_icon.png">
+            <span class="title">EXITO</span>
         </div>
     </header>
-    <h2>Ha habido un error al enviar el formulario. Por favor vuelva a intentarlo.</h2>
-    <h3>Volviendo al formulario en 5 segundos...</h3>
- 
+    <h2>El formulario se envio con exito.</h2>
+    <h3>Volviendo en 5 segundos...</h3>
+
     <script>
 
         setTimeout(() => {
-            window.location = '../upload.html';
+            window.location = '../index.php';
         }, 5000);
     </script>
-
 
 </body>
 </html>
